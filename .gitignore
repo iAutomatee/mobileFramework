@@ -1,1 +1,7 @@
 /.idea/
+/target/test-classes/ApiDemos-debug.apk
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/target/mobileFramework-1.0-SNAPSHOT.jar
+/target/test-classes/MyTest.class
+/target/maven-archiver/pom.properties
