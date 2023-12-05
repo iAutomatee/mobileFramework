@@ -38,7 +38,7 @@ public class ViewsPage extends AndroidActions {
     @AndroidFindBy(accessibility = "Expandable Lists")
     private WebElement expandableLists;
 
-    @AndroidFindBy(accessibility = "(1. Custom Adapter")
+    @AndroidFindBy(accessibility = "1. Custom Adapter")
     private WebElement customAdapter;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='People Names']")

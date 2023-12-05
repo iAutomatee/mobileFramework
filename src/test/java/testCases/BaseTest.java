@@ -1,10 +1,12 @@
+package testCases;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import pageObjects.android.HomePage;
 
 import java.io.File;
@@ -59,7 +61,8 @@ public class BaseTest {
         return AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingDriverExecutable(nodeFile).withAppiumJS(mainFile).usingPort(Integer.parseInt(port)).withArgument(GeneralServerFlag.SESSION_OVERRIDE));
     }
 
-    @BeforeClass(alwaysRun = true)
+
+    @BeforeMethod(alwaysRun = true)
     public void startAppiumServer() {
         driverSetup();
         server = getAppiumService();
@@ -101,7 +104,8 @@ public class BaseTest {
         System.out.println("Server Stopped");
     }
 
-    @AfterClass(alwaysRun = true)
+
+    @AfterMethod(alwaysRun = true)
     public void quitDriver() {
         driver.quit();
         stopAppiumServer();

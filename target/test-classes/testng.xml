@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Suite">
+    <test name="My Test1">
+        <classes>
+            <class name="testCases.PreferencePageTest">
+                <methods>
+<!--                    <include name="testMethod1"/>-->
+<!--                    <include name="testMethod2"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="My Test2">
+        <classes>
+            <class name="testCases.ViewPageGestureTest">
+                <methods>
+                    <!--                    <include name="testMethod1"/>-->
+                    <!--                    <include name="testMethod2"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,6 +1,9 @@
+package testCases;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.android.ViewsPage;
+
 
 public class ViewPageGestureTest extends BaseTest {
 
@@ -16,7 +19,7 @@ public class ViewPageGestureTest extends BaseTest {
         Assert.assertTrue(viewsPage.verifyDragAndDrop());
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void swipeDemo() {
         viewsPage = homePage.clickOnViews();
         viewsPage.clickOnGallery();
@@ -24,14 +27,14 @@ public class ViewPageGestureTest extends BaseTest {
         Assert.assertTrue(viewsPage.verifySwipe());
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void scrollDemo() {
         viewsPage = homePage.clickOnViews();
         Assert.assertTrue(viewsPage.verifyScroll());
     }
 
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void longPressDemo() {
         viewsPage = homePage.clickOnViews();
         viewsPage.clickExpandableList();
