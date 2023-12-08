@@ -12,7 +12,7 @@ public class PreferencePageTest extends BaseTest {
     public void verifyExamplePreferenceDependenciesLabel() {
         preferencesPage = homePage.clickOnPreference();
         preferencesPage.clickOnPreferenceDependencies();
-        preferencesPage.verifyDependencyOption();
+        Assert.assertFalse(preferencesPage.verifyDependencyOption());
     }
 
 
@@ -24,8 +24,6 @@ public class PreferencePageTest extends BaseTest {
         preferencesPage.clickOnWiFiSettings();
         Assert.assertTrue(preferencesPage.verifyWiFiName("WiFi settings"));
     }
-
-
 
 
 }

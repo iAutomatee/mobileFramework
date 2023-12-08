@@ -1,5 +1,7 @@
 package testCases;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -34,6 +36,8 @@ public class BaseTest {
     AppiumDriverLocalService serviceBuilder;
     Properties pro = new Properties();
     private static AppiumDriverLocalService server;
+    ExtentReports extentReports;
+    ExtentSparkReporter reporter;
 
 //    public void configureAppium() throws MalformedURLException {
 //        System.out.println("Appium Configuration Started");
@@ -64,6 +68,7 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void startAppiumServer() {
+//        extentReportConfig();
         driverSetup();
         server = getAppiumService();
         server.start();
@@ -127,4 +132,19 @@ public class BaseTest {
     }
 
 
+//    public void extentReportConfig() {
+//        extentReports = new ExtentReports();
+//        String path = System.getProperty("user.dir")+"/target/reports/index.html";
+//        reporter = new ExtentSparkReporter(path);
+//        reporter.config().setReportName("API Demo Automation Results");
+//        reporter.config().setDocumentTitle("Test Automation Results");
+//        extentReports.attachReporter(reporter);
+//        extentReports.setSystemInfo("QA Name", "iAutomate");
+//        ExtentTest test=extentReports.createTest("API Demos");
+//    }
+
+//    @AfterSuite(alwaysRun = true)
+//    public void tearDown() {
+//        extentReports.flush();
+//    }
 }
